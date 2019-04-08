@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { CounterService } from '../services/counter/counter.service';
 
 @Component({
   selector: 'counter',
   template: `
-    <p>{{ count }}</p>
+    <p>{{ getCountedfromService() }}</p>
   `
 })
 export class CounterComponent {
-  count: number = 0;
+  constructor(private counterService: CounterService) {}
+  getCountedfromService() {
+    return this.counterService.getCounted();
+  }
 }

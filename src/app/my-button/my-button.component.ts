@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterService } from '../services/counter/counter.service';
 
 @Component({
   selector: 'my-button',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
   `
 })
 export class MyButtonComponent {
+  constructor(private counterService: CounterService) {}
   clicked() {
-    console.log('It Works!');
+    this.counterService.count();
   }
 }
