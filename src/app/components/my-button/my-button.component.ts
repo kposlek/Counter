@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CounterService } from '../services/counter/counter.service';
-
+import { CounterService } from 'src/app/services/counter/counter.service';
 @Component({
   selector: 'my-button',
   template: `
